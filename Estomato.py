@@ -5,6 +5,11 @@ import re
 
 class EstomatoCommand(sublime_plugin.TextCommand):
 	def run(self, edit, **args):
+		mandaytohour = round(float(args['mandaytohour']), 1)
+		
+		if not mandaytohour > 0:
+			return
+
 		regex = r"[\d][\.\d]*(\d+)?[d|h]"
 		for region in self.view.sel():
 			if not region.empty():
@@ -21,8 +26,8 @@ class EstomatoCommand(sublime_plugin.TextCommand):
 						hours.append(stamp[:length-1])
 				subTotalDays = sum(map(float,days))
 				subTotalHour = sum(map(float, hours))
-				totalDays = subTotalDays + (subTotalHour / 7)
-				totalHour = (subTotalDays*7) + subTotalHour
+				totalDays = subTotalDays + (subTotalHour / mandaytohour)
+				totalHour = (subTotalDays*mandaytohour) + subTotalHour
 				lines = [
 				s, 
 				"------------------------------------------------", 
