@@ -4,7 +4,8 @@ import re
 
 
 class EstomatoCommand(sublime_plugin.TextCommand):
-	def run(self, edit):
+	def run(self, edit, **args):
+		print(args)
 		regex = r"[\d][\.\d]*(\d+)?[d|h]"
 		for region in self.view.sel():
 			if not region.empty():
@@ -26,8 +27,8 @@ class EstomatoCommand(sublime_plugin.TextCommand):
 				lines = [
 				s, 
 				"------------------------------------------------", 
-				"Mandays required: {days} Days".format(days=totalDays), 
-				"Manhour required: {hour} Hour".format(hour=totalHour),
+				"Mandays required: {days:.3f} Days".format(days=totalDays), 
+				"Manhour required: {hour:.3f} Hour".format(hour=totalHour),
 				"------------------------------------------------"
 				]
 				self.view.replace(edit, region, "\n".join(lines))
