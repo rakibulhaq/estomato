@@ -2,10 +2,24 @@
 A sublime package to quickly calculate man days and man hour needed for a feature development straight from the selection from text editor
 The package will aggregate text which has numeric values representing hour values or day values required to finish a feature i.e.:
 
- - `4h`
- - `4H`
- - `1.2D`
- - `1.2d`
+```
+init 2h
+api integration 3h
+response preparation 2h
+documentation 2h
+internal sync 3h
+```
+
+
+After running command `estomato` selecting the above text will produce the following:
+```
+------------------------------------------------
+Mandays required: 1.85 Days
+Manhour required: 12.00 Hour
+------------------------------------------------
+```
+at the bottom of the selected text
+
 
 ## Installation
 
