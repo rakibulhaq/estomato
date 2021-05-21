@@ -11,7 +11,7 @@ internal sync 3h
 ```
 
 
-After running command `estomato` selecting the above text will produce the following:
+After running command `Estomato: Run` from command pallet selecting the above text will produce the following:
 ```
 ------------------------------------------------
 Mandays required: 1.85 Days
@@ -23,23 +23,18 @@ at the bottom of the selected text
 
 ## Installation
 
- - Install Package Control - https://packagecontrol.io
- - Run `Add Repository` command
- - Paste `https://github.com/rakibulhaq/estomato`
- - Run `Install Package` command
+ - Run `Package Control: Install Package` in command pallet
  - Select `Estomato`
 
 ## Usage
-
-Available commands in the Selection Menu:
-
- - *Estomato* – extracts hour and days values from selected text and summarise at the bottom of the selection
-
-Available commands in the Context Menu (Right click on selected text):
-
- - *Estomato*
  
-Also Available commands using Shortcuts:
+Run Pallet command using Shortcuts:
 
- - *Ctrl + Alt + e (Windows/Linux)*
- - *Cmd + Alt + e (MacOS)*
+ - *Ctrl + Shift + p (Windows/Linux)*
+ - *Cmd + Shift + p (MacOS)*
+
+Type in:
+
+ - *Estomato: Run*
+
+ It will extract hour and days values from selected text and summarise at the bottom of the selection
