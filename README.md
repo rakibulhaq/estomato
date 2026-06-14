@@ -37,4 +37,6 @@ Type in:
 
  - *Estomato: Run*
 
- It will extract hour and days values from selected text and summarise at the bottom of the selection
+ It will extract hour and days values from selected text and summarise at the bottom of the selection.
+
+ It also detects currency amounts prefixed with symbols or currency labels such as `$`, `USD`, `BDT`, `RM`, `Yen`, and `Won`, and supports prefixed operators like `+`, `-`, or `*3` while summing each detected category.
