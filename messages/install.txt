@@ -1,0 +1,18 @@
+Estomato
+========
+
+Thanks for installing Estomato.
+
+Select lines such as
+
+    init 2h
+    api integration 3h
+    licence USD 40
+
+and run "Estomato: Run" from the Command Palette. A summary of man-days,
+man-hours and per-currency amounts is added below the selection.
+
+Prefix a value with -, + or *N to subtract, add or multiply it:
+
+    -1h rework credit
+    *2 3h double shift
