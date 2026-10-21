@@ -3,3 +3,5 @@
 .gitattributes export-ignore
 .gitignore export-ignore
 test_*.py export-ignore
+Makefile export-ignore
+scripts/ export-ignore
