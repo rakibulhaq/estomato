@@ -1,0 +1,25 @@
+Estomato 0.3.0
+==============
+
+What's new
+----------
+
+- Currency totals: amounts prefixed with a symbol or label such as
+  $, USD, BDT, RM, Yen or Won are now summed per currency, e.g.
+
+      licence USD 40 and $ 10
+
+  adds "Amount required [USD]: 40.00" and "Amount required [$]: 10.00"
+  to the summary.
+
+- Prefixed operators are now applied to hour, day and currency values:
+
+      -1h rework credit     subtracts 1 hour
+      *2 3h double shift    counts 6 hours
+      +$5 bonus             adds 5
+
+  Previously "-1h" was counted as +1 hour and "*2" was ignored, so totals
+  from 0.2.0 may differ from what you see now.
+
+Usage is unchanged: select text and run "Estomato: Run" from the
+Command Palette.
