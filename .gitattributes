@@ -1,0 +1,5 @@
+# Keep dev-only files out of the archive Package Control downloads.
+# Sublime loads every top-level .py as a plugin, so tests must not ship.
+.gitattributes export-ignore
+.gitignore export-ignore
+test_*.py export-ignore
