@@ -1,0 +1,7 @@
+Estomato 0.3.1
+==============
+
+Maintenance release. Calculations are unchanged from 0.3.0.
+
+- New installs now get a short welcome message with usage examples.
+- README: added development and release notes.
