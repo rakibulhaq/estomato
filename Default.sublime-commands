@@ -1,3 +1,11 @@
 [
-   { "caption": "Estomato: Run", "command": "estomato", "args": {"mandaytohour": "6.5"} },
+   { "caption": "Estomato: Run", "command": "estomato" },
+   {
+      "caption": "Preferences: Estomato Settings",
+      "command": "edit_settings",
+      "args": {
+         "base_file": "${packages}/Estomato/Estomato.sublime-settings",
+         "default": "{\n\t$0\n}\n"
+      }
+   },
 ]

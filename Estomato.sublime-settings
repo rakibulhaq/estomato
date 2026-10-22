@@ -1,0 +1,5 @@
+{
+	// Number of hours in one man-day, used to convert between days and hours.
+	// A "mandaytohour" arg passed to the estomato command overrides this value.
+	"mandaytohour": 6.5
+}
