@@ -41,6 +41,22 @@ Type in:
 
  It also detects currency amounts prefixed with symbols or currency labels such as `$`, `USD`, `BDT`, `RM`, `Yen`, and `Won`, and supports prefixed operators like `+`, `-`, or `*3` while summing each detected category.
 
+## Settings
+
+By default 1 manday is 6.5 hours. To change it, run `Preferences: Estomato Settings` from the command pallet and set:
+
+```json
+{
+	"mandaytohour": 8
+}
+```
+
+A `mandaytohour` arg passed to the `estomato` command (e.g. from a key binding) overrides the setting:
+
+```json
+{ "keys": ["ctrl+alt+e"], "command": "estomato", "args": {"mandaytohour": 7.5} }
+```
+
 ## Development
 
 Requires `make`, `git` and Python 3. Run `make` to list all targets.

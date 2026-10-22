@@ -1,6 +1,9 @@
 import re
 
 
+DEFAULT_MANDAYTOHOUR = 6.5
+
+
 _TIME_PATTERN = re.compile(
 	r"""
 	(?<!\w)
@@ -38,6 +41,30 @@ def _apply_prefix(prefix, value):
 	if prefix.startswith('*'):
 		factor = prefix[1:].strip()
 		return value * float(factor or 1)
+	return value
+
+
+def resolve_mandaytohour(arg_value=None, setting_value=None):
+	"""Pick the command arg, then the setting, then the default.
+
+	Returns None when the chosen value is not a positive number.
+	"""
+	if arg_value is not None:
+		value = arg_value
+	elif setting_value is not None:
+		value = setting_value
+	else:
+		value = DEFAULT_MANDAYTOHOUR
+
+	if isinstance(value, bool):
+		return None
+	try:
+		value = round(float(value), 1)
+	except (TypeError, ValueError):
+		return None
+
+	if not value > 0:
+		return None
 	return value
 
 

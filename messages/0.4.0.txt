@@ -1,0 +1,16 @@
+Estomato 0.4.0
+==============
+
+The number of hours in a man-day is now a setting.
+
+- 1 manday still defaults to 6.5 hours. To change it, run
+  "Preferences: Estomato Settings" from the Command Palette and set:
+
+      {
+          "mandaytohour": 8
+      }
+
+- A "mandaytohour" arg passed to the estomato command (e.g. from a key
+  binding) still overrides the setting.
+- An invalid value (zero, negative or not a number) now shows a message
+  in the status bar instead of doing nothing.
